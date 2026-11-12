@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Перевірено — пошук у навчальних джерелах</title>
+<meta name="description" content="Офлайн-пошук у перевірених навчальних фрагментах: відповідь лише з джерела, без інтернету й без ШІ.">
+<meta name="theme-color" content="#e6eaf0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1620" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Перевірено">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1 class="logo">Перевірено</h1>
+    <p class="status" id="status" aria-live="polite">Відкриваю базу…</p>
+  </header>
+
+  <p class="lead">Відповідь лише з перевірених джерел&nbsp;— поруч із текстом документа. Працює без інтернету й без ШІ.</p>
+
+  <form class="ask" id="form" role="search" autocomplete="off">
+    <label class="vh" for="q">Що перевірити</label>
+    <input id="q" name="q" type="search" placeholder="Що перевірити?" enterkeyhint="search" spellcheck="false">
+    <button type="submit">Знайти</button>
+  </form>
+
+  <div class="examples" id="examples">
+    <span>Спробуйте:</span>
+  </div>
+
+  <section class="out" id="out" aria-live="polite"></section>
+
+  <section class="base" id="base" aria-label="Що є в базі"></section>
+
+  <footer class="foot">
+    <p>Пошук іде на вашому пристрої за ключовими словами, без мережі й без мовних моделей. Пояснення написано тільки за текстом фрагмента. Перед заняттям звіряйте чинність документа на офіційному порталі «Законодавство України».</p>
+  </footer>
+</div>
+<noscript><p class="error">Увімкніть JavaScript: без нього пошук не працює.</p></noscript>
+<script src="search.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
